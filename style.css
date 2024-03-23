@@ -361,6 +361,11 @@ button.increase-amount {
   -o-transform: translate(-50%, -50%);
   z-index: 1000;
 }
+@media (max-width: 1400px) {
+  .show-imgs {
+    max-width: 650px;
+  }
+}
 .main,
 .product-perview {
   position: relative;
