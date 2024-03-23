@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Damon" />
+    <meta name="description" content="" />
+    <!-- main style css -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" />
+    <title>E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&family=Kumbh+Sans:wght@100..900&family=Outfit:wght@100..900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/533e5d4e51.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Start Nav -->
+    <nav class="container">
+      <div class="left-part">
+        <button onclick="openMenu()" class="toggle-btn">
+          <svg
+            width="16"
+            height="15"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="logo">
+          <a href="#"
+            ><img
+              src="https://byronbyron.github.io/ecommerce-product-page/images/logo.svg"
+              alt=""
+          /></a>
+        </div>
+        <ul class="links">
+          <button onclick="closeMenu()" class="toggle-btn close-btn">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="right-part">
+        <button class="cart" onclick="toggleCard()">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill="#69707D"
+              fill-rule="nonzero"
+            ></path>
+          </svg>
+          <span class="count">0</span>
+        </button>
+        <img
+          src="https://byronbyron.github.io/ecommerce-product-page/images/image-avatar.png"
+          alt=""
+          class="user-img"
+        />
+      </div>
+      <div class="cart-div">
+        <div class="header">
+          <h2>Cart</h2>
+        </div>
+        <div class="products">
+          <h2>Your cart is empty.</h2>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav -->
+    <!-- Start Section -->
+    <section class="content container">
+      <div class="product-perview">
+        <button onclick="perviousImg(this)" class="pervious">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img
+          src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-1.webp"
+          alt=""
+          class="main-img"
+          data-index="1"
+          onclick="toggleImg()"
+        />
+        <button onclick="nextImg(this)" class="next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="other-imgs">
+          <img
+            src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-1-thumbnail.webp"
+            class="active"
+            alt=""
+          /><img
+            src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-2-thumbnail.webp"
+            alt=""
+          /><img
+            src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-3-thumbnail.webp"
+            alt=""
+          /><img
+            src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-4-thumbnail.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="product-detials">
+        <span class="company">SNEAKER COMPANY</span>
+        <h1 class="info">Fall Limited Edition Sneakers</h1>
+        <p class="more-detials">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-and-discount">
+          <span class="price">$125.00</span>
+          <span class="discount">50%</span>
+          <span class="main-price">$250.00</span>
+        </div>
+        <div class="amount-and-card">
+          <div class="amount">
+            <input type="number" class="main-input" value="1" />
+            <button class="decrease-amount" onclick="removeItems()">
+              <svg
+                width="12"
+                height="4"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <path
+                    d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                    id="a"
+                  ></path>
+                </defs>
+                <use fill-rule="nonzero" xlink:href="#a"></use>
+              </svg>
+            </button>
+            <button class="increase-amount" onclick="addItems()">
+              <svg
+                width="12"
+                height="12"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <path
+                    d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                    id="b"
+                  ></path>
+                </defs>
+                <use fill-rule="nonzero" xlink:href="#b"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="add-to-card">
+            <svg
+              width="22"
+              height="20"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              ></path>
+            </svg>
+            <span>Add to cart</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Section -->
+    <!-- Start ShowImgs -->
+    <div class="show-imgs">
+      <div class="product-perview">
+        <button onclick="toggleImg()" class="close">
+          <svg
+            fill="currentColor"
+            width="14"
+            height="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="main">
+          <button onclick="perviousImg(this)" class="pervious">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <img
+            src="https://byronbyron.github.io/ecommerce-product-page/images/image-product-1.webp"
+            alt=""
+            data-index="1"
+            class="main-img"
+          />
+          <button onclick="nextImg(this)" class="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End ShowImgs -->
+    <script src="main.js"></script>
+  </body>
+</html>
