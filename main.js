@@ -70,12 +70,12 @@ addToCard.addEventListener("click", () => {
       products.removeChild(products.querySelector(".check"));
     }
     products.appendChild(checkBtn);
-  }
   document.querySelector("span.count").style.display = "block";
   +document.querySelector("span.count").textContent++;
   mainInput.value = 1;
   UpdatePrice(mainInput.value);
   cartDiv.classList.remove("shown");
+  }
 });
 
 function closeMenu() {
